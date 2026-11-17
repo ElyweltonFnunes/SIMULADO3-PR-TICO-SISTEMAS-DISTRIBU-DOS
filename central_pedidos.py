@@ -34,7 +34,7 @@ def processar_pedido(numero):
                 pedidos_confirmados.append(numero)
 
 def sincronizar():
-    replica["estoque"] = replica["estoque"]
+    replica["estoque"] = principal["estoque"]
     
 def consultar_estoque():
     if principal["online"]:
@@ -45,9 +45,9 @@ def consultar_estoque():
 
     if replica["online"]:
         return (
-            "REPLICA",
-            replica["estoque"]
-        )
+             "REPLICA",
+             replica["estoque"]
+    )
 
     return "INDISPONIVEL", None
 
