@@ -33,11 +33,9 @@ def processar_pedido(numero):
                 principal["estoque"] -= 1
                 pedidos_confirmados.append(numero)
 
-
 def sincronizar():
-    replica["estoque"] = principal["estoque"]
-
-
+    replica["estoque"] = replica["estoque"]
+    
 def consultar_estoque():
     if principal["online"]:
         return (
