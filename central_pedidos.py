@@ -14,7 +14,7 @@ replica = {
 }
 
 # Controle de concorrência
-MAXIMO_SIMULTANEO = 3
+MAXIMO_SIMULTANEO = 2
 
 semaforo = threading.Semaphore(
     MAXIMO_SIMULTANEO
